@@ -422,19 +422,26 @@ figure:hover{
 
 .box-decoration::before{
     content: '';
-    position: absolute;
-    height: var(--box-decoration-base);
-    width: var(--box-decoration-base);
-    background-color: var(--color-primary);
-    border: calc(var(--box-decoration-base) / 8) solid var(--color-lights);
+    --b: 3px;  /* border thickness */
+    --s: 60px; /* preferred size shape */
+    --c: var(--color-alt);
+    --d: #ffd900 ;
+    width: var(--s);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: 
+      repeating-radial-gradient(calc(2*var(--b)) at top,var(--d) -1px,var(--c) 0 calc(50% - 1px),var(--d) 50% calc(100% - 1px)) calc(50% + var(--b)) 100%, 
+      repeating-radial-gradient(calc(2*var(--b)) at bottom,var(--c) -1px,var(--d) 0 calc(50% - 1px),var(--c) 50% calc(100% - 1px)) 50% 0;
+    background-size: 150% 50%;
+    background-repeat: no-repeat;
+    border: calc(var(--b) * 2) solid var(--color-primary);
     box-sizing: border-box;
-    bottom: 0;
+    position: absolute;
     z-index: 1;
-    left: calc(50% - var(--box-decoration-base) / 2);
-    bottom: calc(var(--box-decoration-base) / 2 * -1 + var(--box-decoration-base) / 8);
-    transform: rotate(45deg);
-    border-radius: .0001em;
-    animation: rotate 4s linear infinite;
+    bottom: calc(var(--s) / 2 * -1);
+    left: calc((var(--s) / 2 * -1) + 50%);
+
+    animation: rotate 15s linear infinite;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -540,7 +547,7 @@ figure:hover{
         transform: rotate(0deg) scale(1); 
     }
     50%{
-       transform: rotate(180deg) scale(2); 
+       transform: rotate(180deg) scale(1.5); 
     }
     100%{
         transform: rotate(360deg) scale(1);

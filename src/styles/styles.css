@@ -60,10 +60,20 @@ figure{
     color: var(--color-primary);
 }
 
-.max-w-box{
+.alt-box .accordion-title{
+    background-color: var(--color-alt);
+}
+
+.max-w-box-xxl{
    max-width: var(--page-xxl);
    padding: var(--spaces-padding-base);
    margin: 0 auto;
+}
+
+.max-w-box-md{
+    max-width: var(--page-md);
+    padding: var(--spaces-padding-base);
+    margin: 0 auto;
 }
 
 .alt-box p{
@@ -441,6 +451,78 @@ figure:hover{
 
 }
 
+
+.accordion{
+    overflow: hidden;
+    position: relative;
+}
+
+.accordion-title{
+    background-color: var(--color-lights);
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: calc(var(--spaces-gap-base) / 2);
+    padding: calc(var(--spaces-padding-base) / 4) 0;
+    font-size: 1.25em;
+    border-bottom: 1px solid;
+}
+
+.accordion-title::before{
+    --triangle-small-sizes: 5px;
+    --triangle-big-sizes: 9.1px;
+    content: '';
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: var(--triangle-small-sizes) 0 var(--triangle-small-sizes) var(--triangle-big-sizes);
+    border-color: transparent transparent transparent var(--color-primary);
+    transition: all 300ms;
+    display: inline-block;
+}
+
+.accordion-content{
+    animation: closed 500ms forwards;
+    overflow: hidden;
+    padding: calc(var(--spaces-gap-base) / 2);
+}
+
+.accordion.opened .accordion-content{
+    animation: opened 500ms forwards;
+}
+
+.accordion.opened .accordion-title::before{
+    transform: rotate(90deg);
+}
+
+@keyframes opened{
+    0%{
+        transform: translateY(-120%);
+        position: absolute;
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes closed{
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-120%);
+        position: absolute;
+        opacity: 0;
+    }
+}
+
+
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -465,3 +547,4 @@ figure:hover{
     }
  
 }
+

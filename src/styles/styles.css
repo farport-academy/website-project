@@ -7,7 +7,9 @@
     --color-shadows: #333333;
     --color-shadows-deep: #000;
     --color-lights: #fff;
-    
+    --color-inputs-bg: #e1e1e1;
+    --color-inputs-border: #c7c6c6;
+    --color-inputs-text: #333333;
     /* Spaces */
     --spaces-padding-base: 2rem;
     --spaces-gap-base: 1.5rem;
@@ -353,6 +355,53 @@ ul li::marker{
     filter: brightness(85%);
 }
 
+/* Forms */
+.form-group fieldset{
+    border: none;
+    padding: 0;
+    margin-bottom: 1em;
+}
+
+.form-group-flex{
+    display: flex;
+    align-items:  flex-start;
+    gap: var(--spaces-gap-base)
+}
+
+
+.form-group label{
+    display: block;
+    margin-bottom: .5em;
+}
+
+.form-control{
+    display: block;
+    width: 100%;
+    background-color: var(--color-inputs-bg);
+    color: var(--color-inputs-text);
+    border-color: var(--color-inputs-border);
+    border-style: solid;
+    border-width: .25em;
+    border-radius: .5em;
+    padding: 1em;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.form-control[type=checkbox]{
+    display: inline-block;
+    width: auto;
+    accent-color: var(--color-primary);
+}
+
+.form-control:focus{
+    outline-color: var(--color-primary);
+}
+
+button{
+    cursor: pointer;
+}
+
 
 /* images */
 figure{
@@ -360,12 +409,6 @@ figure{
 }
 figure:hover{
     transform: rotate(-5deg);
-}
-
-/* Forms */
-.form-control:focus{
-    background-color: red;
-    color: var(--color-lights);
 }
 
 /* Details */
@@ -450,6 +493,9 @@ figure:hover{
         --color-primary-hover:rgb(169, 29, 11);
         --color-shadows: #fff;
         --color-lights: #333;
+        --color-inputs-bg: #000000;
+        --color-inputs-border: #2a2929;
+        --color-inputs-text: #d1d1d1;
     }
 
     .logo, .main-footer, .button ,.button:hover, .page-hero__content{
@@ -503,6 +549,7 @@ figure:hover{
 .accordion.opened .accordion-title::before{
     transform: rotate(90deg);
 }
+
 
 @keyframes opened{
     0%{

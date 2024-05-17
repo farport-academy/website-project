@@ -92,14 +92,28 @@
         </article>
         
       </section>
-      <section>
-        <form method="POST">
-            <fieldset>
-                <input class="form-control" type="email" placeholder="inserisci il tuo indirizzo">
-            </fieldset>
-            <fieldset>
-              <textarea name="" id="" rows="10"></textarea>
-            </fieldset>
+      <section class="max-w-box-md page-contact-form">
+        <header>
+          <h1>Inviaci Un messaggio!</h1>
+        </header>
+        <form method="POST" action="thankyou.html" class="form-group">
+          <fieldset>
+            <label for="name">Nome e cognome</label>
+            <input class="form-control" id="name" name="name" type="text" placeholder="inserisci i tuoi dati" required />
+          </fieldset>
+          <fieldset>
+              <label for="email">Indirizzo email</label>
+              <input class="form-control" id="email" name="email" type="email" placeholder="inserisci il tuo indirizzo" required />
+          </fieldset>
+          <fieldset>
+            <label for="message">Scrivi il tuo messaggio</label>
+            <textarea class="form-control" name="message" id="message" placeholder="inserisci qui il tuo messagio" rows="10" required></textarea>
+          </fieldset>
+          <fieldset class="form-group-flex">
+            <input class="form-control" type="checkbox" name="contitions" id="contitions" required/>
+            <label for="conditions"> accetta le condizioni</label>
+          </fieldset>
+          <button type="submit" class="button">Invia il messaggio</button>
         </form>
       </section>
     </main>

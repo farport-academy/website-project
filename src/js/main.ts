@@ -1,3 +1,6 @@
+import '../scss/styles.scss'
+
+import 'bootstrap'
 
 window.toggleAccordion = (element) => {
     // individuo il contenitore di tutti i miei elemeti accordion

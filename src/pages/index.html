@@ -3,153 +3,171 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/styles/styles.css" />
-    <script type="module" src="/src/scripts/main.ts"></script>
+    <!-- <link rel="stylesheet" href="/src/styles/styles.css" /> -->
     <title>A tutto legno</title>
   </head>
   <body>
-    <header class="main-header base-box alternative-box">
-      <a href="/" class="logo">
-        <h1>A tutto Legname</h1>
-        <h2>I professionisti che stavi cercando</h2>
-      </a>
-      <nav>
-        <a class="button" href="/contacts"> Contatti </a>
-      </nav>
+    <header class="navbar bg-dark">
+      <div class="container">
+        <a href="/" class="navbar-brand text-light">
+          <h1 class="h4">A tutto Legname</h1>
+          <h2 class="h5">I professionisti che stavi cercando</h2>
+        </a>
+        <nav>
+          <a class="btn btn-primary" href="/contacts"> Contatti </a>
+        </nav>
+      </div>
     </header>
-    <main class="main-content">
-      <section
-        class="page-hero base-box"
-        style="background-image: url('/img/home.png')"
-      >
-        <div class="page-hero__content">
-          <h1>Chi siamo</h1>
-          <h2>Creaiamo prodotti su misura dal 1950</h2>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. In
-            eligendi facere quia iusto vero nesciunt, quisquam numquam vitae a
-            velit accusamus qui enim voluptate, officia debitis porro.
-          </p>
+    <main>
+      <section style="background-image: url('/img/home.png')">
+        <div class="container py-5 d-flex justify-content-end">
+          <div class="text-light col-md-6">
+            <h1>Chi siamo</h1>
+            <h2>Creaiamo prodotti su misura dal 1950</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. In
+              eligendi facere quia iusto vero nesciunt, quisquam numquam vitae a
+              velit accusamus qui enim voluptate, officia debitis porro.
+            </p>
+          </div>
         </div>
       </section>
-      <section class="page-products base-box box-decoration">
-        <article class="feature__item">
-          <header>
-            <h1>Mobili su misura</h1>
-            <h2>Arreda la casa dei tuoi sogni</h2>
-          </header>
-          <div class="flexbox">
-            <figure>
-              <picture>
-                <source
-                  srcset="https://placehold.co/400x400"
-                  media="(min-width:521px) and (max-width: 860px)"
-                />
-                <source
-                  srcset="https://placehold.co/200x200"
-                  media="(max-width: 520px)"
-                />
-                <img
-                  src="https://placehold.co/600x400"
-                  alt="Mobili su misura"
-                />
-              </picture>
-            </figure>
-            <div class="feature__item-content">
-              <main>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Soluta neque error eaque nemo doloribus in minima iure, eos
-                  minus expedita voluptatum, consequatur, magnam voluptatibus.
-                  Repellendus voluptatum autem natus, perferendis non nulla,
-                  iste ipsa expedita quos cumque incidunt ipsum facere odio
-                  adipisci neque earum quis? Nostrum omnis dicta ratione aut
-                  reiciendis?
-                </p>
-              </main>
-              <footer>
-                <a href="#">Scopri di più</a>
-              </footer>
+      <p class="d-inline-flex gap-1">
+        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+          Link with href
+        </a>
+        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          Button with data-bs-target
+        </button>
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+        </div>
+      </div>
+      <section class="container">
+        <div class="row py-5">
+          <article class="col-md">
+            <header>
+              <h1>Mobili su misura</h1>
+              <h2>Arreda la casa dei tuoi sogni</h2>
+            </header>
+            <div class="flexbox">
+              <figure>
+                <picture>
+                  <source
+                    srcset="https://placehold.co/400x400"
+                    media="(min-width:521px) and (max-width: 860px)"
+                  />
+                  <source
+                    srcset="https://placehold.co/200x200"
+                    media="(max-width: 520px)"
+                  />
+                  <img
+                    src="https://placehold.co/600x400"
+                    alt="Mobili su misura"
+                    class="img-fluid"
+                  />
+                </picture>
+              </figure>
+              <div class="feature__item-content">
+                <main>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Soluta neque error eaque nemo doloribus in minima iure, eos
+                    minus expedita voluptatum, consequatur, magnam voluptatibus.
+                    Repellendus voluptatum autem natus, perferendis non nulla,
+                    iste ipsa expedita quos cumque incidunt ipsum facere odio
+                    adipisci neque earum quis? Nostrum omnis dicta ratione aut
+                    reiciendis?
+                  </p>
+                </main>
+                <footer>
+                  <a href="#">Scopri di più</a>
+                </footer>
+              </div>
             </div>
-          </div>
-        </article>
-        <article class="feature__item feature__item-relevant">
-          <header>
-            <h1>Carpenteria</h1>
-            <h2>Tutto quello che ti serve per i tuoi progetti</h2>
-          </header>
-          <div class="flexbox">
-            <figure>
-              <picture>
-                <source
-                  srcset="https://placehold.co/400x400"
-                  media="(min-width:521px) and (max-width: 860px)"
-                />
-                <source
-                  srcset="https://placehold.co/200x200"
-                  media="(max-width: 520px)"
-                />
-                <img
-                  src="https://placehold.co/600x400"
-                  alt="Mobili su misura"
-                />
-              </picture>
-            </figure>
-            <div class="feature__item-content">
-              <main>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Soluta neque error eaque nemo doloribus in minima iure, eos
-                  minus expedita voluptatum, consequatur, magnam voluptatibus.
-                  Repellendus voluptatum autem natus, perferendis non nulla,
-                  iste ipsa expedita quos cumque incidunt ipsum facere odio
-                  adipisci neque earum quis? Nostrum omnis dicta ratione aut
-                  reiciendis?
-                </p>
-              </main>
-              <footer>
-                <a href="#">Scopri di più</a>
-              </footer>
+          </article>
+          <article class="col-md">
+            <header>
+              <h1>Carpenteria</h1>
+              <h2>Tutto quello che ti serve per i tuoi progetti</h2>
+            </header>
+            <div class="flexbox">
+              <figure>
+                <picture>
+                  <source
+                    srcset="https://placehold.co/400x400"
+                    media="(min-width:521px) and (max-width: 860px)"
+                  />
+                  <source
+                    srcset="https://placehold.co/200x200"
+                    media="(max-width: 520px)"
+                  />
+                  <img
+                    src="https://placehold.co/600x400"
+                    alt="Mobili su misura"
+                    class="img-fluid"
+                  />
+                </picture>
+              </figure>
+              <div class="feature__item-content">
+                <main>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Soluta neque error eaque nemo doloribus in minima iure, eos
+                    minus expedita voluptatum, consequatur, magnam voluptatibus.
+                    Repellendus voluptatum autem natus, perferendis non nulla,
+                    iste ipsa expedita quos cumque incidunt ipsum facere odio
+                    adipisci neque earum quis? Nostrum omnis dicta ratione aut
+                    reiciendis?
+                  </p>
+                </main>
+                <footer>
+                  <a href="#">Scopri di più</a>
+                </footer>
+              </div>
             </div>
-          </div>
-        </article>
-        <article class="feature__item">
-          <header>
-            <h1>Finiture per Barche</h1>
-            <h2>Con noi navigherai meglio!</h2>
-          </header>
-          <div class="flexbox">
-            <figure>
-              <picture>
-                <source
-                  srcset="https://placehold.co/400x400"
-                  media="(min-width:521px) and (max-width: 860px)"
-                />
-                <source
-                  srcset="https://placehold.co/200x200"
-                  media="(max-width: 520px)"
-                />
-                <img
-                  src="https://placehold.co/600x400"
-                  alt="Mobili su misura"
-                />
-              </picture>
-            </figure>
-            <div class="feature__item-content">
-              <main>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Soluta neque error eaque nemo doloribus in minima iure, eos
-                  minus expedita voluptatum, consequatur, magnam voluptatibus.
-                </p>
-              </main>
+          </article>
+          <article class="col-md">
+            <header>
+              <h1>Finiture per Barche</h1>
+              <h2>Con noi navigherai meglio!</h2>
+            </header>
+            <div class="flexbox">
+              <figure>
+                <picture>
+                  <source
+                    srcset="https://placehold.co/400x400"
+                    media="(min-width:521px) and (max-width: 860px)"
+                  />
+                  <source
+                    srcset="https://placehold.co/200x200"
+                    media="(max-width: 520px)"
+                  />
+                  <img
+                    src="https://placehold.co/600x400"
+                    alt="Mobili su misura"
+                    class="img-fluid"
+                  />
+                </picture>
+              </figure>
+              <div class="feature__item-content">
+                <main>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Soluta neque error eaque nemo doloribus in minima iure, eos
+                    minus expedita voluptatum, consequatur, magnam voluptatibus.
+                  </p>
+                </main>
 
-              <footer>
-                <a href="#">Scopri di più</a>
-              </footer>
+                <footer>
+                  <a href="#">Scopri di più</a>
+                </footer>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
+        </div>
       </section>
       <div class="toggle-item">
         <div class="alt-box box-decoration">
@@ -221,7 +239,21 @@
                 Titolo
               </div>
               <div class="accordion-content">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae autem pariatur maxime, expedita eius aspernatur culpa similique tempore dignissimos tenetur nihil cumque ea, quia eveniet labore, assumenda magni accusamus qui consequatur harum? Recusandae, ipsum? Maxime laboriosam praesentium dolor dolore veritatis hic repellat, perspiciatis illum saepe vitae tempora iusto nihil quaerat quasi omnis illo iste nemo debitis libero voluptas deserunt nostrum dolores eius blanditiis! Voluptatibus fuga libero odit ullam voluptate ratione animi molestiae rerum esse rem at, aspernatur et quisquam eligendi eum totam illo porro! Aperiam, debitis nulla, id necessitatibus voluptate similique quod, deleniti sapiente repellat architecto alias reprehenderit animi voluptatibus? Ut facilis illo fugit commodi minus ex nihil, provident ducimus maxime fuga, accusamus natus, magni possimus rerum iure dolores nulla.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Molestiae autem pariatur maxime, expedita eius aspernatur culpa
+                similique tempore dignissimos tenetur nihil cumque ea, quia
+                eveniet labore, assumenda magni accusamus qui consequatur harum?
+                Recusandae, ipsum? Maxime laboriosam praesentium dolor dolore
+                veritatis hic repellat, perspiciatis illum saepe vitae tempora
+                iusto nihil quaerat quasi omnis illo iste nemo debitis libero
+                voluptas deserunt nostrum dolores eius blanditiis! Voluptatibus
+                fuga libero odit ullam voluptate ratione animi molestiae rerum
+                esse rem at, aspernatur et quisquam eligendi eum totam illo
+                porro! Aperiam, debitis nulla, id necessitatibus voluptate
+                similique quod, deleniti sapiente repellat architecto alias
+                reprehenderit animi voluptatibus? Ut facilis illo fugit commodi
+                minus ex nihil, provident ducimus maxime fuga, accusamus natus,
+                magni possimus rerum iure dolores nulla.
               </div>
             </div>
             <div class="accordion">
@@ -229,7 +261,21 @@
                 Titolo
               </div>
               <div class="accordion-content">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae autem pariatur maxime, expedita eius aspernatur culpa similique tempore dignissimos tenetur nihil cumque ea, quia eveniet labore, assumenda magni accusamus qui consequatur harum? Recusandae, ipsum? Maxime laboriosam praesentium dolor dolore veritatis hic repellat, perspiciatis illum saepe vitae tempora iusto nihil quaerat quasi omnis illo iste nemo debitis libero voluptas deserunt nostrum dolores eius blanditiis! Voluptatibus fuga libero odit ullam voluptate ratione animi molestiae rerum esse rem at, aspernatur et quisquam eligendi eum totam illo porro! Aperiam, debitis nulla, id necessitatibus voluptate similique quod, deleniti sapiente repellat architecto alias reprehenderit animi voluptatibus? Ut facilis illo fugit commodi minus ex nihil, provident ducimus maxime fuga, accusamus natus, magni possimus rerum iure dolores nulla.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Molestiae autem pariatur maxime, expedita eius aspernatur culpa
+                similique tempore dignissimos tenetur nihil cumque ea, quia
+                eveniet labore, assumenda magni accusamus qui consequatur harum?
+                Recusandae, ipsum? Maxime laboriosam praesentium dolor dolore
+                veritatis hic repellat, perspiciatis illum saepe vitae tempora
+                iusto nihil quaerat quasi omnis illo iste nemo debitis libero
+                voluptas deserunt nostrum dolores eius blanditiis! Voluptatibus
+                fuga libero odit ullam voluptate ratione animi molestiae rerum
+                esse rem at, aspernatur et quisquam eligendi eum totam illo
+                porro! Aperiam, debitis nulla, id necessitatibus voluptate
+                similique quod, deleniti sapiente repellat architecto alias
+                reprehenderit animi voluptatibus? Ut facilis illo fugit commodi
+                minus ex nihil, provident ducimus maxime fuga, accusamus natus,
+                magni possimus rerum iure dolores nulla.
               </div>
             </div>
             <div class="accordion">
@@ -237,7 +283,21 @@
                 Titolo
               </div>
               <div class="accordion-content">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae autem pariatur maxime, expedita eius aspernatur culpa similique tempore dignissimos tenetur nihil cumque ea, quia eveniet labore, assumenda magni accusamus qui consequatur harum? Recusandae, ipsum? Maxime laboriosam praesentium dolor dolore veritatis hic repellat, perspiciatis illum saepe vitae tempora iusto nihil quaerat quasi omnis illo iste nemo debitis libero voluptas deserunt nostrum dolores eius blanditiis! Voluptatibus fuga libero odit ullam voluptate ratione animi molestiae rerum esse rem at, aspernatur et quisquam eligendi eum totam illo porro! Aperiam, debitis nulla, id necessitatibus voluptate similique quod, deleniti sapiente repellat architecto alias reprehenderit animi voluptatibus? Ut facilis illo fugit commodi minus ex nihil, provident ducimus maxime fuga, accusamus natus, magni possimus rerum iure dolores nulla.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Molestiae autem pariatur maxime, expedita eius aspernatur culpa
+                similique tempore dignissimos tenetur nihil cumque ea, quia
+                eveniet labore, assumenda magni accusamus qui consequatur harum?
+                Recusandae, ipsum? Maxime laboriosam praesentium dolor dolore
+                veritatis hic repellat, perspiciatis illum saepe vitae tempora
+                iusto nihil quaerat quasi omnis illo iste nemo debitis libero
+                voluptas deserunt nostrum dolores eius blanditiis! Voluptatibus
+                fuga libero odit ullam voluptate ratione animi molestiae rerum
+                esse rem at, aspernatur et quisquam eligendi eum totam illo
+                porro! Aperiam, debitis nulla, id necessitatibus voluptate
+                similique quod, deleniti sapiente repellat architecto alias
+                reprehenderit animi voluptatibus? Ut facilis illo fugit commodi
+                minus ex nihil, provident ducimus maxime fuga, accusamus natus,
+                magni possimus rerum iure dolores nulla.
               </div>
             </div>
           </main>
@@ -245,5 +305,7 @@
       </section>
     </main>
     <footer class="main-footer base-box">@2024 A tutto legno</footer>
+    <script type="module" src="/src/js/main.ts"></script>
+
   </body>
 </html>

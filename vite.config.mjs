@@ -21,6 +21,9 @@ export default defineConfig({
     },
   },
   resolve: {
-    alias: { "/src": path.resolve(process.cwd(), "src") },
+    alias: {
+       "/src": path.resolve(process.cwd(), "src"),
+       '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap'),
+      },
   },
 });

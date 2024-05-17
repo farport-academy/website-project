@@ -333,9 +333,10 @@ ul li::marker{
 .button:hover{
     background-color: var(--color-primary-hover);
     color:var(--color-lights);
-    transform: scale(1.15) rotate(5deg);
+    animation: pulse .3s 1;
+    /* transform: scale(1.15) rotate(5deg);
     box-shadow: 2px 2px 1em var(--color-shadows-deep);
-    transition: all var(--transition-duration);
+    transition: all var(--transition-duration); */
 }
 
 .button:active{
@@ -392,6 +393,7 @@ figure:hover{
 .box-decoration{
     position: relative;
     padding-bottom: 3em;
+    transform-origin: center;
         box-shadow: inset 0 -.5em 0 0 var(--color-lights);
 
 }
@@ -439,6 +441,17 @@ figure:hover{
 
 }
 
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
 @keyframes rotate {
     0%{
@@ -452,4 +465,3 @@ figure:hover{
     }
  
 }
-

@@ -1,15 +1,33 @@
+
+$color-primary:  #7c2c11;
+$color-primary-hover: darken($color-primary,10);
+$color-alt: #f9c777;
+$color-shadows: #333333;
+$color-shadows-deep: darken($color-shadows,10);
+$color-lights: #fff;
+$color-inputs-bg: #e1e1e1;
+$color-inputs-border: #c7c6c6;
+$color-inputs-text: #333333;
+
+$color-dark-shadows: #fff;
+$color-dark-lights: #333;
+$color-dark-inputs-bg: #000000;
+$color-dark-inputs-border: #2a2929;
+$color-dark-inputs-text: #d1d1d1;
+
+
 :root{
     --box-decoration-base: 2em;
     /* Theme */
-    --color-primary: rgb(165, 56, 42);
-    --color-primary-hover:rgb(137, 45, 33);
-    --color-alt: #f9c777;
-    --color-shadows: #333333;
-    --color-shadows-deep: #000;
-    --color-lights: #fff;
-    --color-inputs-bg: #e1e1e1;
-    --color-inputs-border: #c7c6c6;
-    --color-inputs-text: #333333;
+    --color-primary: #{$color-primary};
+    --color-primary-hover: #{$color-primary-hover};
+    --color-alt: #{$color-alt};
+    --color-shadows: #{$color-shadows};
+    --color-shadows-deep: #{$color-shadows-deep};
+    --color-lights: #{$color-lights};
+    --color-inputs-bg: #{$color-inputs-bg};
+    --color-inputs-border: #{$color-inputs-border};
+    --color-inputs-text: #{$color-inputs-text};
     /* Spaces */
     --spaces-padding-base: 2rem;
     --spaces-gap-base: 1.5rem;
@@ -489,13 +507,11 @@ figure:hover{
 
 @media (prefers-color-scheme: dark) {
     :root{
-        --color-primary: rgb(194, 33, 11);
-        --color-primary-hover:rgb(169, 29, 11);
-        --color-shadows: #fff;
-        --color-lights: #333;
-        --color-inputs-bg: #000000;
-        --color-inputs-border: #2a2929;
-        --color-inputs-text: #d1d1d1;
+        --color-shadows: #{$color-dark-shadows};
+        --color-lights: #{$color-dark-lights};
+        --color-inputs-bg:#{$color-dark-inputs-bg};
+        --color-inputs-border:#{$color-dark-inputs-border};
+        --color-inputs-text:#{$color-dark-inputs-text};
     }
 
     .logo, .main-footer, .button ,.button:hover, .page-hero__content{

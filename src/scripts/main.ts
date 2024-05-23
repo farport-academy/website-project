@@ -1,4 +1,4 @@
-
+import '../index.css'
 window.toggleAccordion = (element) => {
     // individuo il contenitore di tutti i miei elemeti accordion
     const container = element.parentNode.parentNode

@@ -6,37 +6,38 @@
     <!-- <link rel="stylesheet" href="/src/styles/styles.css" /> -->
     <title>Contatti</title>
   </head>
-  <body>
-    <header class="main-header base-box">
-      <a href="/" class="logo">
-        <h1>A tutto Legno</h1>
-        <h2>I professionisti che stavi cercando</h2>
-      </a>
-      <nav>
-        <a class="button" href="/contacts"> Contatti </a>
-      </nav>
+  <body class="d-flex flex-column justify-content-between min-vh-100">
+    <header class="navbar bg-primary">
+      <div class="container">
+        <a href="/" class="navbar-brand text-light">
+          <h1 class="h4">A tutto Legname</h1>
+          <h2 class="h5">I professionisti che stavi cercando</h2>
+        </a>
+        <nav>
+          <a class="btn btn-primary" href="/contacts"> Contatti </a>
+        </nav>
+      </div>
     </header>
-    <main class="main-content">
+    <main class="mb-auto">
       <section
-        class="page-hero base-box"
         style="
           background-image: url('/img/contacts.webp');
         "
       >
-        <div class="page-hero__content">
-          <h1>Mettiti in contatto con noi</h1>
+      <div class="container py-5 d-flex justify-content-end">
+        <div class=" col-md-6 bg-primary-subtle p-3">
+          <h1>Grazie per averci contattato</h1>
           <h2>I nostri esperti saranno a tua disposizione per soddisfare le tue richieste</h2>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. In
             eligendi facere quia iusto vero nesciunt, quisquam numquam vitae a
             velit accusamus qui enim voluptate, officia debitis porro.
           </p>
-          <a href="/" class="button">Torna al sito</a>
         </div>
       </section>
      
     </main>
-    <footer class="main-footer base-box">@2024 A tutto legno</footer>
+    <footer class="container-fluid bg-secondary p-3 bg-opacity-10">@2024 A tutto legno</footer>
     <script type="module" src="/src/js/main.ts"></script>
   </body>
 </html>

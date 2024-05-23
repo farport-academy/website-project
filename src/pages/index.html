@@ -6,8 +6,8 @@
     <!-- <link rel="stylesheet" href="/src/styles/styles.css" /> -->
     <title>A tutto legno</title>
   </head>
-  <body>
-    <header class="navbar bg-dark">
+  <body class="d-flex flex-column justify-content-between min-vh-100">
+    <header class="navbar bg-primary">
       <div class="container">
         <a href="/" class="navbar-brand text-light">
           <h1 class="h4">A tutto Legname</h1>
@@ -32,19 +32,6 @@
           </div>
         </div>
       </section>
-      <p class="d-inline-flex gap-1">
-        <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-          Link with href
-        </a>
-        <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-          Button with data-bs-target
-        </button>
-      </p>
-      <div class="collapse" id="collapseExample">
-        <div class="card card-body">
-          Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-        </div>
-      </div>
       <section class="container">
         <div class="row py-5">
           <article class="col-md">
@@ -169,10 +156,10 @@
           </article>
         </div>
       </section>
-      <div class="toggle-item">
-        <div class="alt-box box-decoration">
-          <section class="alt-box base-box grid-col-2">
-            <div>
+      <div class="py-5 bg-primary-subtle">
+        <div class="container">
+          <section class="row align-items-end">
+            <div class="col-md-6">
               <h1>Punti di forza</h1>
               <h2>Le caratteristiche che ci rendono i migliori</h2>
               <p>
@@ -183,7 +170,7 @@
               </p>
             </div>
 
-            <div>
+            <div class="col-md-6">
               <ul>
                 <li>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo,
@@ -203,109 +190,155 @@
           </section>
         </div>
       </div>
-      <section class="page-contacts base-box grid-col-2">
-        <div class="page-contacts__info">
-          <h1>Mettiti incontatto con noi</h1>
-          <h2>
-            Che tu debba costruire il tavolo dei tuoi sogni o un veliero, noi
-            possiamo farlo!
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
-            explicabo soluta minus nam, odit facilis, voluptate dignissimos
-            ducimus architecto libero corporis? Unde fuga dolor minus culpa
-            atque corrupti sunt laudantium mollitia alias accusantium iusto
-            neque necessitatibus, omnis qui odio?
-          </p>
-          <a class="button" href="/contacts"> Contattaci </a>
-        </div>
-        <div>
-          <figure>
-            <img
-              src="https://images.pexels.com/photos/7709201/pexels-photo-7709201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-            />
-          </figure>
+      <section class="py-4 bg-primary bg-opacity-75">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <h1>Mettiti incontatto con noi</h1>
+              <h2>
+                Che tu debba costruire il tavolo dei tuoi sogni o un veliero,
+                noi possiamo farlo!
+              </h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+                explicabo soluta minus nam, odit facilis, voluptate dignissimos
+                ducimus architecto libero corporis? Unde fuga dolor minus culpa
+                atque corrupti sunt laudantium mollitia alias accusantium iusto
+                neque necessitatibus, omnis qui odio?
+              </p>
+              <a class="button" href="/contacts"> Contattaci </a>
+            </div>
+            <div class="col-md-6">
+              <figure class="m-0">
+                <img
+                  class="w-100"
+                  src="https://images.pexels.com/photos/7709201/pexels-photo-7709201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                />
+              </figure>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="page-faq alt-box">
+      <section class="container py-5">
         <div class="max-w-box-md">
           <header>
             <h1>Domande frequenti</h1>
             <h2>Le risposte alla domande che ci vengono fatte più spesso</h2>
           </header>
-          <main>
-            <div class="accordion">
-              <div class="accordion-title" onclick="toggleAccordion(this)">
-                Titolo
+          <main class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <button
+                  class="accordion-button "
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                >
+                  Titolo
+                </button>
               </div>
-              <div class="accordion-content">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Molestiae autem pariatur maxime, expedita eius aspernatur culpa
-                similique tempore dignissimos tenetur nihil cumque ea, quia
-                eveniet labore, assumenda magni accusamus qui consequatur harum?
-                Recusandae, ipsum? Maxime laboriosam praesentium dolor dolore
-                veritatis hic repellat, perspiciatis illum saepe vitae tempora
-                iusto nihil quaerat quasi omnis illo iste nemo debitis libero
-                voluptas deserunt nostrum dolores eius blanditiis! Voluptatibus
-                fuga libero odit ullam voluptate ratione animi molestiae rerum
-                esse rem at, aspernatur et quisquam eligendi eum totam illo
-                porro! Aperiam, debitis nulla, id necessitatibus voluptate
-                similique quod, deleniti sapiente repellat architecto alias
-                reprehenderit animi voluptatibus? Ut facilis illo fugit commodi
-                minus ex nihil, provident ducimus maxime fuga, accusamus natus,
-                magni possimus rerum iure dolores nulla.
-              </div>
-            </div>
-            <div class="accordion">
-              <div class="accordion-title" onclick="toggleAccordion(this)">
-                Titolo
-              </div>
-              <div class="accordion-content">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Molestiae autem pariatur maxime, expedita eius aspernatur culpa
-                similique tempore dignissimos tenetur nihil cumque ea, quia
-                eveniet labore, assumenda magni accusamus qui consequatur harum?
-                Recusandae, ipsum? Maxime laboriosam praesentium dolor dolore
-                veritatis hic repellat, perspiciatis illum saepe vitae tempora
-                iusto nihil quaerat quasi omnis illo iste nemo debitis libero
-                voluptas deserunt nostrum dolores eius blanditiis! Voluptatibus
-                fuga libero odit ullam voluptate ratione animi molestiae rerum
-                esse rem at, aspernatur et quisquam eligendi eum totam illo
-                porro! Aperiam, debitis nulla, id necessitatibus voluptate
-                similique quod, deleniti sapiente repellat architecto alias
-                reprehenderit animi voluptatibus? Ut facilis illo fugit commodi
-                minus ex nihil, provident ducimus maxime fuga, accusamus natus,
-                magni possimus rerum iure dolores nulla.
+              <div
+                id="collapseOne"
+                class="accordion-collapse show"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Molestiae autem pariatur maxime, expedita eius aspernatur
+                  culpa similique tempore dignissimos tenetur nihil cumque ea,
+                  quia eveniet labore, assumenda magni accusamus qui consequatur
+                  harum? Recusandae, ipsum? Maxime laboriosam praesentium dolor
+                  dolore veritatis hic repellat, perspiciatis illum saepe vitae
+                  tempora iusto nihil quaerat quasi omnis illo iste nemo debitis
+                  libero voluptas deserunt nostrum dolores eius blanditiis!
+                  Voluptatibus fuga libero odit ullam voluptate ratione animi
+                  molestiae rerum esse rem at, aspernatur et quisquam eligendi
+                  eum totam illo porro! Aperiam, debitis nulla, id
+                  necessitatibus voluptate similique quod, deleniti sapiente
+                  repellat architecto alias reprehenderit animi voluptatibus? Ut
+                  facilis illo fugit commodi minus ex nihil, provident ducimus
+                  maxime fuga, accusamus natus, magni possimus rerum iure
+                  dolores nulla.
+                </div>
               </div>
             </div>
-            <div class="accordion">
-              <div class="accordion-title" onclick="toggleAccordion(this)">
-                Titolo
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                >
+                  Titolo
+                </button>
               </div>
-              <div class="accordion-content">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Molestiae autem pariatur maxime, expedita eius aspernatur culpa
-                similique tempore dignissimos tenetur nihil cumque ea, quia
-                eveniet labore, assumenda magni accusamus qui consequatur harum?
-                Recusandae, ipsum? Maxime laboriosam praesentium dolor dolore
-                veritatis hic repellat, perspiciatis illum saepe vitae tempora
-                iusto nihil quaerat quasi omnis illo iste nemo debitis libero
-                voluptas deserunt nostrum dolores eius blanditiis! Voluptatibus
-                fuga libero odit ullam voluptate ratione animi molestiae rerum
-                esse rem at, aspernatur et quisquam eligendi eum totam illo
-                porro! Aperiam, debitis nulla, id necessitatibus voluptate
-                similique quod, deleniti sapiente repellat architecto alias
-                reprehenderit animi voluptatibus? Ut facilis illo fugit commodi
-                minus ex nihil, provident ducimus maxime fuga, accusamus natus,
-                magni possimus rerum iure dolores nulla.
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Molestiae autem pariatur maxime, expedita eius aspernatur
+                  culpa similique tempore dignissimos tenetur nihil cumque ea,
+                  quia eveniet labore, assumenda magni accusamus qui consequatur
+                  harum? Recusandae, ipsum? Maxime laboriosam praesentium dolor
+                  dolore veritatis hic repellat, perspiciatis illum saepe vitae
+                  tempora iusto nihil quaerat quasi omnis illo iste nemo debitis
+                  libero voluptas deserunt nostrum dolores eius blanditiis!
+                  Voluptatibus fuga libero odit ullam voluptate ratione animi
+                  molestiae rerum esse rem at, aspernatur et quisquam eligendi
+                  eum totam illo porro! Aperiam, debitis nulla, id
+                  necessitatibus voluptate similique quod, deleniti sapiente
+                  repellat architecto alias reprehenderit animi voluptatibus? Ut
+                  facilis illo fugit commodi minus ex nihil, provident ducimus
+                  maxime fuga, accusamus natus, magni possimus rerum iure
+                  dolores nulla.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                >
+                  Titolo
+                </button>
+              </div>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Molestiae autem pariatur maxime, expedita eius aspernatur
+                  culpa similique tempore dignissimos tenetur nihil cumque ea,
+                  quia eveniet labore, assumenda magni accusamus qui consequatur
+                  harum? Recusandae, ipsum? Maxime laboriosam praesentium dolor
+                  dolore veritatis hic repellat, perspiciatis illum saepe vitae
+                  tempora iusto nihil quaerat quasi omnis illo iste nemo debitis
+                  libero voluptas deserunt nostrum dolores eius blanditiis!
+                  Voluptatibus fuga libero odit ullam voluptate ratione animi
+                  molestiae rerum esse rem at, aspernatur et quisquam eligendi
+                  eum totam illo porro! Aperiam, debitis nulla, id
+                  necessitatibus voluptate similique quod, deleniti sapiente
+                  repellat architecto alias reprehenderit animi voluptatibus? Ut
+                  facilis illo fugit commodi minus ex nihil, provident ducimus
+                  maxime fuga, accusamus natus, magni possimus rerum iure
+                  dolores nulla.
+                </div>
               </div>
             </div>
           </main>
         </div>
       </section>
     </main>
-    <footer class="main-footer base-box">@2024 A tutto legno</footer>
+    <footer class="container-fluid bg-secondary p-3 bg-opacity-10">@2024 A tutto legno</footer>
     <script type="module" src="/src/js/main.ts"></script>
-
   </body>
 </html>

@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.main-header{
+    @apply bg-orange-900 flex justify-between p-3 text-white;
+}
+
+.button{
+    @apply bg-orange-800 hover:bg-orange-700 px-4 py-2 rounded-full text-white transition;
+}
+
+.page-hero{
+    @apply flex flex-col md:flex-row justify-end text-white p-5;
+
+}
+
+.page-hero__content{
+    @apply md:w-1/2
+}
+
+.form-control{
+    @apply border-2 block
+}
+

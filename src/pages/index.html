@@ -7,20 +7,18 @@
     <title>A tutto legno</title>
   </head>
   <body>
-    <header class="bg-orange-900 flex justify-between p-3 text-white">
+    <header class="main-header">
       <a href="/" class="logo">
         <h1 class="text-3xl font-bold">A tutto Legname</h1>
         <h2>I professionisti che stavi cercando</h2>
       </a>
       <nav class="flex flex-col justify-center">
-        <a class="bg-orange-700 hover:bg-orange-600 p-2 rounded-full" href="/contacts"> Contatti </a>
+        <a class="button" href="/contacts"> Contatti </a>
       </nav>
     </header>
+
     <main class="main-content">
-      <section
-        class="page-hero base-box"
-        style="background-image: url('/img/home.png')"
-      >
+      <section class="page-hero" style="background-image: url('/img/home.png')">
         <div class="page-hero__content">
           <h1>Chi siamo</h1>
           <h2>Creaiamo prodotti su misura dal 1950</h2>
@@ -31,7 +29,7 @@
           </p>
         </div>
       </section>
-      <section class="page-products base-box box-decoration">
+      <section class="grid md:grid-cols-3 gap-4 max-w-screen-lg mx-auto p-5">
         <article class="feature__item">
           <header>
             <h1>Mobili su misura</h1>
@@ -65,6 +63,40 @@
                   adipisci neque earum quis? Nostrum omnis dicta ratione aut
                   reiciendis?
                 </p>
+                <details>
+                  <!-- Button to be visible -->
+                  <summary class="button inline-block cursor-pointer">
+                    Click me
+                  </summary>
+                  <div class="w-[100%] h-[100%] fixed bg-slate-600 top-0 left-0 bg-opacity-25">
+                    <!-- Content it will be hidden, till user clicks on the summary button. -->
+                    <div
+                      class="bg-white rounded-2xl w-[50%] h-[40%] my-auto mx-auto fixed inset-0 text-gray-600 p-4 py-8 shadow-lg"
+                    >
+                      <!-- Close drop down we use a line of JS code. -->
+                      <span
+                        onclick="closeDialog(this)"
+                        class="bg-gray-400 rounded-full flex items-center justify-center text-3xl font-bold uppercase absolute -right-4 -top-4 w-10 h-10 text-white hover:bg-blue-200 hover:duration-200 cursor-pointer"
+                      >
+                        X
+                      </span>
+
+                      <!-- title -->
+                      <h1 class="text-2xl text-center text-blue-300 font-bold">
+                        This is a popup.
+                      </h1>
+
+                      <p class="text-gray-600 text-base my-3 text-center">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Cum enim sint accusamus dolor, architecto omnis laborum
+                        tempora vitae, eveniet corporis qui officiis accusantium
+                        eius, esse corrupti possimus repudiandae! Quod esse, sed
+                        laudantium nobis tenetur dolores impedit quaerat, ipsa
+                        molestias eaque.
+                      </p>
+                    </div>
+                  </div>
+                </details>
               </main>
               <footer>
                 <a href="#">Scopri di più</a>
@@ -105,6 +137,39 @@
                   adipisci neque earum quis? Nostrum omnis dicta ratione aut
                   reiciendis?
                 </p>
+                <details open class="transition">
+                  <!-- Button to be visible -->
+                  <summary >
+                    <img
+                    src="https://placehold.co/600x400"
+                    alt="Mobili su misura"
+                  />
+                  </summary>
+                  <div class="w-[100%] h-[100%] fixed bg-slate-600 top-0 left-0 bg-opacity-75 transition">
+                    <!-- Content it will be hidden, till user clicks on the summary button. -->
+                    <div
+                      class="bg-white rounded-2xl w-[50%] h-[40%] my-auto mx-auto fixed inset-0 text-gray-600 p-4 py-8 shadow-lg"
+                    >
+                      <!-- Close drop down we use a line of JS code. -->
+                      <span
+                        onclick="closeDialog(this)"
+                        class="bg-gray-400 rounded-full flex items-center justify-center text-3xl font-bold uppercase absolute -right-4 -top-4 w-10 h-10 text-white hover:bg-blue-200 hover:duration-200 cursor-pointer"
+                      >
+                        X
+                      </span>
+
+                      <!-- title -->
+                      <h1 class="text-2xl text-center text-blue-300 font-bold">
+                        This is a popup 2.
+                      </h1>
+
+                      <img
+                      src="https://placehold.co/600x800"
+                      alt="Mobili su misura"
+                    />
+                    </div>
+                  </div>
+                </details>
               </main>
               <footer>
                 <a href="#">Scopri di più</a>
@@ -220,7 +285,21 @@
                 Titolo
               </div>
               <div class="accordion-content">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae autem pariatur maxime, expedita eius aspernatur culpa similique tempore dignissimos tenetur nihil cumque ea, quia eveniet labore, assumenda magni accusamus qui consequatur harum? Recusandae, ipsum? Maxime laboriosam praesentium dolor dolore veritatis hic repellat, perspiciatis illum saepe vitae tempora iusto nihil quaerat quasi omnis illo iste nemo debitis libero voluptas deserunt nostrum dolores eius blanditiis! Voluptatibus fuga libero odit ullam voluptate ratione animi molestiae rerum esse rem at, aspernatur et quisquam eligendi eum totam illo porro! Aperiam, debitis nulla, id necessitatibus voluptate similique quod, deleniti sapiente repellat architecto alias reprehenderit animi voluptatibus? Ut facilis illo fugit commodi minus ex nihil, provident ducimus maxime fuga, accusamus natus, magni possimus rerum iure dolores nulla.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Molestiae autem pariatur maxime, expedita eius aspernatur culpa
+                similique tempore dignissimos tenetur nihil cumque ea, quia
+                eveniet labore, assumenda magni accusamus qui consequatur harum?
+                Recusandae, ipsum? Maxime laboriosam praesentium dolor dolore
+                veritatis hic repellat, perspiciatis illum saepe vitae tempora
+                iusto nihil quaerat quasi omnis illo iste nemo debitis libero
+                voluptas deserunt nostrum dolores eius blanditiis! Voluptatibus
+                fuga libero odit ullam voluptate ratione animi molestiae rerum
+                esse rem at, aspernatur et quisquam eligendi eum totam illo
+                porro! Aperiam, debitis nulla, id necessitatibus voluptate
+                similique quod, deleniti sapiente repellat architecto alias
+                reprehenderit animi voluptatibus? Ut facilis illo fugit commodi
+                minus ex nihil, provident ducimus maxime fuga, accusamus natus,
+                magni possimus rerum iure dolores nulla.
               </div>
             </div>
             <div class="accordion">
@@ -228,7 +307,21 @@
                 Titolo
               </div>
               <div class="accordion-content">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae autem pariatur maxime, expedita eius aspernatur culpa similique tempore dignissimos tenetur nihil cumque ea, quia eveniet labore, assumenda magni accusamus qui consequatur harum? Recusandae, ipsum? Maxime laboriosam praesentium dolor dolore veritatis hic repellat, perspiciatis illum saepe vitae tempora iusto nihil quaerat quasi omnis illo iste nemo debitis libero voluptas deserunt nostrum dolores eius blanditiis! Voluptatibus fuga libero odit ullam voluptate ratione animi molestiae rerum esse rem at, aspernatur et quisquam eligendi eum totam illo porro! Aperiam, debitis nulla, id necessitatibus voluptate similique quod, deleniti sapiente repellat architecto alias reprehenderit animi voluptatibus? Ut facilis illo fugit commodi minus ex nihil, provident ducimus maxime fuga, accusamus natus, magni possimus rerum iure dolores nulla.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Molestiae autem pariatur maxime, expedita eius aspernatur culpa
+                similique tempore dignissimos tenetur nihil cumque ea, quia
+                eveniet labore, assumenda magni accusamus qui consequatur harum?
+                Recusandae, ipsum? Maxime laboriosam praesentium dolor dolore
+                veritatis hic repellat, perspiciatis illum saepe vitae tempora
+                iusto nihil quaerat quasi omnis illo iste nemo debitis libero
+                voluptas deserunt nostrum dolores eius blanditiis! Voluptatibus
+                fuga libero odit ullam voluptate ratione animi molestiae rerum
+                esse rem at, aspernatur et quisquam eligendi eum totam illo
+                porro! Aperiam, debitis nulla, id necessitatibus voluptate
+                similique quod, deleniti sapiente repellat architecto alias
+                reprehenderit animi voluptatibus? Ut facilis illo fugit commodi
+                minus ex nihil, provident ducimus maxime fuga, accusamus natus,
+                magni possimus rerum iure dolores nulla.
               </div>
             </div>
             <div class="accordion">
@@ -236,7 +329,21 @@
                 Titolo
               </div>
               <div class="accordion-content">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae autem pariatur maxime, expedita eius aspernatur culpa similique tempore dignissimos tenetur nihil cumque ea, quia eveniet labore, assumenda magni accusamus qui consequatur harum? Recusandae, ipsum? Maxime laboriosam praesentium dolor dolore veritatis hic repellat, perspiciatis illum saepe vitae tempora iusto nihil quaerat quasi omnis illo iste nemo debitis libero voluptas deserunt nostrum dolores eius blanditiis! Voluptatibus fuga libero odit ullam voluptate ratione animi molestiae rerum esse rem at, aspernatur et quisquam eligendi eum totam illo porro! Aperiam, debitis nulla, id necessitatibus voluptate similique quod, deleniti sapiente repellat architecto alias reprehenderit animi voluptatibus? Ut facilis illo fugit commodi minus ex nihil, provident ducimus maxime fuga, accusamus natus, magni possimus rerum iure dolores nulla.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Molestiae autem pariatur maxime, expedita eius aspernatur culpa
+                similique tempore dignissimos tenetur nihil cumque ea, quia
+                eveniet labore, assumenda magni accusamus qui consequatur harum?
+                Recusandae, ipsum? Maxime laboriosam praesentium dolor dolore
+                veritatis hic repellat, perspiciatis illum saepe vitae tempora
+                iusto nihil quaerat quasi omnis illo iste nemo debitis libero
+                voluptas deserunt nostrum dolores eius blanditiis! Voluptatibus
+                fuga libero odit ullam voluptate ratione animi molestiae rerum
+                esse rem at, aspernatur et quisquam eligendi eum totam illo
+                porro! Aperiam, debitis nulla, id necessitatibus voluptate
+                similique quod, deleniti sapiente repellat architecto alias
+                reprehenderit animi voluptatibus? Ut facilis illo fugit commodi
+                minus ex nihil, provident ducimus maxime fuga, accusamus natus,
+                magni possimus rerum iure dolores nulla.
               </div>
             </div>
           </main>

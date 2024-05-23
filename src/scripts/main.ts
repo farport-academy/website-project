@@ -1,4 +1,10 @@
 import '../index.css'
+
+
+window.closeDialog = (element) =>{
+    element.parentNode.parentNode.parentNode.removeAttribute('open')
+}
+
 window.toggleAccordion = (element) => {
     // individuo il contenitore di tutti i miei elemeti accordion
     const container = element.parentNode.parentNode

@@ -1,10 +1,10 @@
 @use "sass:map";
-
+@import "mixins.scss";
 @import "theme.scss";
 @import "root.scss";
 
 @import "utils.scss";
-@import "mixins.scss";
+
 @import "functions.scss";
 
 @import "typography.scss";
@@ -473,18 +473,4 @@ figure:hover {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    @each $key, $value in $dark-colors {
-      --color-#{$key}: #{$value};
-    }
-  }
-
-  .logo,
-  .main-footer,
-  .button,
-  .button:hover,
-  .page-hero__content {
-    color: var(--color-shadows);
-  }
-}
+@import 'darkmode.scss';

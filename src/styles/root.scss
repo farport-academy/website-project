@@ -1,23 +1,5 @@
-@use "sass:map";
-
 :root {
-  --box-decoration-base: 2em;
-  /* Theme */
-  @each $key, $value in $light-colors {
-    --color-#{$key}: #{$value};
-  }
-
-  /* Spaces */
-
-  --spaces-padding-base: #{map.get($dimensions, spaces, padding, base)};
-  --spaces-gap-base: #{map.get($dimensions, spaces, gap, base)};
-  /* Breakpoints */
-  @each $key, $value in map.get($dimensions, page) {
-    --page-#{$key}: #{$value};
-  }
-
-  /* Transitions */
-  --transition-duration: 0.3s;
+  @include generateCssVariables($theme);
 }
 
 body {

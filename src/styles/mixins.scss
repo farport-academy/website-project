@@ -19,3 +19,14 @@
     box-shadow: 4px 4px 0px 0 var(--color-alt);
   }
 }
+
+
+@mixin generateCssVariables($map, $prefix: '-'){
+  @each $key, $value in $map {
+    @if(type-of($value) == 'map'){
+      @include generateCssVariables($value, '#{$prefix}-#{$key}');
+    }@else{
+     #{$prefix}-#{$key}: #{$value};
+    }
+  }
+};

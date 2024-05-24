@@ -1,0 +1,68 @@
+@use "sass:map";
+
+$colors: (
+  primary: #7c2c11,
+  alt: #f9c777,
+  shadows: #333333,
+  lights: #fff,
+  inputs-bg: #e1e1e1,
+  inputs-border: #c7c6c6,
+  inputs-text: #333333,
+);
+
+$light-colors: map.merge(
+  $colors,
+  (
+    primary-hover: darken(map.get($colors, primary), 10),
+    alt-hover: darken(map.get($colors, alt), 10),
+    shadows-deep: darken(map.get($colors, shadows), 10),
+  )
+);
+
+$dark-colors: (
+  shadows: #fff,
+  lights: #333,
+  inputs-bg: #000000,
+  inputs-border: #2a2929,
+  inputs-text: #d1d1d1,
+);
+
+$dimensions: (
+  spaces: (
+    padding: (
+      base: 2rem,
+    ),
+    gap: (
+      base: 1.5rem,
+    ),
+  ),
+  page: (
+    xxl: 1600px,
+    md: 768px,
+  ),
+);
+
+$theme: (
+  light-colors: $light-colors,
+  dark-colors: $dark-colors,
+  spaces: (
+    padding: (
+      base: 2rem,
+    ),
+    gap: (
+      base: 1.5rem,
+    ),
+  ),
+  page: (
+    xxl: 1600px,
+    md: 768px,
+  ),
+  transition: (
+    duration: 0.3s,
+  ),
+  box: (
+    decoration: (
+      base: 2em,
+    ),
+  ),
+);

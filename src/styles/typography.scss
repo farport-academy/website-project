@@ -1,0 +1,21 @@
+p {
+    line-height: 1.5;
+  }
+  
+  a {
+    color: var(--color-primary);
+  }
+  
+  ul li {
+    padding-bottom: 1em;
+    line-height: 1.5em;
+    list-style: square;
+    color: var(--color-shadows);
+  }
+  
+  ul li::marker {
+    color: var(--color-primary);
+    font-size: 2em;
+    vertical-align: baseline;
+  }
+  

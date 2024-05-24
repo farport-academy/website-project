@@ -1,0 +1,21 @@
+@mixin bordered-background(
+  $color: var(--color-alt),
+  $border-color: var(--color-primary),
+  $border-size: 4rem
+) {
+  background-color: #{$color};
+  border: #{$border-size} solid #{$border-color};
+  box-sizing: border-box;
+}
+
+@mixin first-letter {
+  &::first-letter {
+    font-size: 150%;
+    color: var(--color-lights);
+    padding: 0.25em;
+    margin-right: 0.25em;
+    float: left;
+    background-color: var(--color-primary);
+    box-shadow: 4px 4px 0px 0 var(--color-alt);
+  }
+}
